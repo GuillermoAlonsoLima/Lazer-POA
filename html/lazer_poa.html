@@ -1,0 +1,102 @@
+<html lang="pt-br">	
+
+    <head>	
+        <meta charset="UTF-8" />	
+        <title>Lazer POA</title>
+        <script src="/javascript/menu.js"></script>	
+    </head>	
+
+    <body>
+
+        <!-- titulo -->
+        <div>
+            <div>
+                <p>Lazer POA</p>
+            </div>
+        </div>
+
+        <!-- menu -->
+        <div>
+            <button type="button" id="homeBtn" onclick="selecionarMenu('home');">Home</button>
+            <button type="button" id="restauranteBtn" onclick="selecionarMenu('restaurante');">Restaurante</button>
+            <button type="button" id="parquesBtn" onclick="selecionarMenu('parques');">Parques</button>
+            <button type="button" id="baresBtn" onclick="selecionarMenu('bares');">Bares</button>
+            <button type="button" id="ofertasBtn" onclick="selecionarMenu('ofertas');">Ofertas</button>
+            <button type="button" id="transporteBtn" onclick="selecionarMenu('transporte');">Transporte</button>
+            <button type="button" id="eventosBtn" onclick="selecionarMenu('eventos');">Eventos</button>
+            <button type="button" id="contatoBtn" onclick="selecionarMenu('contato');">Contato</button>
+        </div>
+
+        <!-- home -->
+        <div style="display:none" id="home">
+            <img src="" alt=""/>
+            <div>
+                <p>
+                    POA cidade de xyz anos, recebe 1000 turistas por mes, que buscam conhecer a cultura gaucha.
+                </p>
+            </div>
+            <div>
+                <p>Siga-nos!</p>
+                <a href="">
+                    <img src="" alt=""/>
+                </a>
+                <a href="">
+                        <img src="" alt=""/>
+                </a>
+                <a href="">
+                        <img src="" alt=""/>
+                </a>
+            </div>
+        </div>
+
+        <!-- restaurantes -->
+        <div style="display:none" id="restaurantes">
+        </div>
+
+        <!-- parques -->
+        <div style="display:none" id="parques">
+        </div>
+
+        <!-- bares -->
+        <div style="display:none" id="bares">
+        </div>
+
+        <!-- ofertas -->
+        <div style="display:none" id="ofertas">
+            <img src="" alt=""/>
+            <p>Lançador de Ofertas</p>
+            <img src="" alt=""/>
+            <p>Tchê Ofertas</p>
+            <img src="" alt=""/>
+            <p>Groupon</p>
+        </div>
+
+        <!-- transporte -->
+        <div style="display:none" id="transporte">
+        </div>
+
+        <!-- eventos -->
+        <div style="display:none" id="eventos">
+            </div>
+
+        <!-- contato -->
+        <div style="display:none" id="contato">
+            <p>Envia suas sugestões/dúvidas</p>
+            <form>
+                <label for="nome">Nome</label>
+                <input type="text" name="contatoForm" id="nome">
+                <br>
+                <label for="assunto">Assunto</label>
+                <input type="text" name="contatoForm" id="assunto">
+                <br>
+                <label for="mensagem">Mensagem</label>
+                <input type="text" name="contatoForm" id="mensagem">
+                <br>
+                <button type="submit" name="enviarBtn">Enviar</button>
+            </form>
+        </div>
+
+        
+    </body>	
+
+</html>
