@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Bares POA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+
+      function initMap() {
+        var nbsteak = {lat: -30.0179456, lng: -51.1893504};
+		var galpaoCrioulo = {lat: -30.0179456, lng: -51.1893504};	
+		var portoAlegre = {lat: -30.0317838,lng: -51.2093156};
+		
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: portoAlegre
+        });
+
+        var marker = new google.maps.Marker({
+          position: portoAlegre,
+          map: map,
+          title: 'Porto Alegre'
+        });
+	  }
+    
+	function showMap(location) {
+		var coordinates;
+		switch (location) {
+		  case "nb_steak":
+			coordinates = {lat: -30.0200011, lng: -51.1988945};
+			break;
+		  case "galpao_crioulo":
+			coordinates = {lat: -30.0230453, lng: -51.190567};
+			break;
+		  }
+		
+		
+		var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: coordinates
+        });
+
+        var marker = new google.maps.Marker({
+          position: coordinates,
+          map: map,
+          title: location
+        });
+	}
+	
+	</script>
+	
+  </head>
+  <body>
+  	    <div class="side-div">
+  	    	
+  	    </div>
+	  	<div class="center-div">
+		    <div id="map"></div>
+
+			<div id="content">
+				<div id="note">
+					Clique no logo dos bares para visualizá-los no mapa!
+				</div>
+				<div id="logo">
+					<img src="images/sgtpepper.png" onclick="showMap('nb_steak')" style="cursor:pointer" />
+				</div>
+				<div id="description">
+					Desde 1987, a noite de Porto Alegre tem o mais original Pub Londrino: Sgt. Peppers Pub, Bar & Restaurante. 
+				</div>
+				<div id="logo">
+					<img src="images/artbar.png" onclick="showMap('galpao_crioulo')" style="cursor:pointer"/>
+				</div>
+				<div id="description">
+					O Art&Bar cresceu, amadureceu e reafirmou a sua personalidade. 
+					Rock n' Roll de qualidade, ambiente agradável, bebidas para todos os gostos e uma cozinha com sabores que irão diferenciar suas noites na Capital.
+					
+				</div>
+
+			</div>
+		</div>
+		<div class="side-div"></div>
+	    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHkeZYygc1u7GPQqcOvKrHlOxVgSbLOKw&callback=initMap">
+    </script>
+  </body>
+</html>

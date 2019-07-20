@@ -4,6 +4,16 @@
         <meta charset="UTF-8" />	
         <title>Lazer POA</title>
         <script src="/javascript/menu.js"></script>	
+        <script src="/javascript/map.js"></script>	
+        <link rel="stylesheet" type="text/css" href="/css/restaurantes.css">
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+        <link rel="stylesheet" type="text/css" href="/css/ofertas.css">
+        <link rel="stylesheet" type="text/css" href="/css/contatos.css">
+        <link rel="stylesheet" type="text/css" href="/css/eventos.css">
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHkeZYygc1u7GPQqcOvKrHlOxVgSbLOKw&callback=initMap">
+        </script>
     </head>	
 
     <body>
@@ -11,14 +21,14 @@
         <!-- titulo -->
         <div>
             <div>
-                <p>Lazer POA</p>
+                <p class="titulo"">Lazer POA</p>
             </div>
         </div>
 
         <!-- menu -->
-        <div>
+        <div class="menu"">
             <button type="button" id="homeBtn" onclick="selecionarMenu('home');">Home</button>
-            <button type="button" id="restauranteBtn" onclick="selecionarMenu('restaurante');">Restaurante</button>
+            <button type="button" id="restaurantesBtn" onclick="selecionarMenu('restaurantes');">Restaurante</button>
             <button type="button" id="parquesBtn" onclick="selecionarMenu('parques');">Parques</button>
             <button type="button" id="baresBtn" onclick="selecionarMenu('bares');">Bares</button>
             <button type="button" id="ofertasBtn" onclick="selecionarMenu('ofertas');">Ofertas</button>
@@ -28,71 +38,193 @@
         </div>
 
         <!-- home -->
-        <div style="display:none" id="home">
-            <img src="" alt=""/>
-            <div>
+        <div style="display:block" id="home">
+            <img class="imagem" src="http://imagemaerears.com.br/wp-content/uploads/2016/08/Porto_Alegre-RS.jpg" alt=""/>
+            <div class="descricao divisao">
                 <p>
-                    POA cidade de xyz anos, recebe 1000 turistas por mes, que buscam conhecer a cultura gaucha.
+                    Porto Alegre é um município brasileiro e a capital do estado mais meridional do Brasil, o Rio Grande do Sul. Com uma área de 496,682 km², possui uma geografia diversificada, com morros, baixadas e um grande lago: o Guaíba. Dista 2 027 quilômetros de Brasília, a capital nacional.
                 </p>
             </div>
-            <div>
-                <p>Siga-nos!</p>
-                <a href="">
-                    <img src="" alt=""/>
+            <div class="divisao seguir">
+                <p class="sigaNos">Siga-nos!</p>
+                <a href="https://pt-br.facebook.com/">
+                    <img class="icone" src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png" alt=""/>
                 </a>
-                <a href="">
-                        <img src="" alt=""/>
+                <a href="https://twitter.com/login?lang=pt">
+                        <img class="icone" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9bHN8sA-HGpzCHDIH3_60q_TBDuhgVVss54bksg-p_TblFr0muw" alt=""/>
                 </a>
-                <a href="">
-                        <img src="" alt=""/>
+                <a href="https://www.instagram.com/?hl=pt-br">
+                        <img class="icone" src="https://image.flaticon.com/icons/png/512/174/174855.png" alt=""/>
                 </a>
             </div>
         </div>
 
         <!-- restaurantes -->
         <div style="display:none" id="restaurantes">
+            <div class="side-div">
+        
+            </div>
+            <div class="center-div">
+                <div name="map"></div>
+    
+                <div name="content">
+                    <div name="note">
+                        Clique no logo dos restaurantes para visualizá-los no mapa!
+                    </div>
+                    <div name="logo">
+                        <img class="imagemRestaurante" src="/images/nbsteak.jpg" onclick="showMap('nb_steak',0)" style="cursor:pointer" />
+                    </div>
+                    <div name="description">
+                        <p>Quando parecia não haver mais o que inventar no sistema de rodízio de carnes, eis que surge o NB Steak com uma charmosa proposta. O novo conceito chamado de Menu Degustação permite que o cliente experimente uma seleção de cortes de carne, saladas e acompanhamentos do melhor que a casa tem a oferecer.</p>
+                    </div>
+                    <div name="logo">
+                        <img class="imagemRestaurante" src="/images/galpaocrioulo.jpg" onclick="showMap('galpao_crioulo',0)" style="cursor:pointer"/>
+                    </div>
+                    <div name="description">
+                        <p>Localizada no coração do Parque da Harmonia, inserido no centro da capital gaúcha – Porto Alegre. Serve como ponto de referência da culinária e projeção do folclore gaúcho para turistas nacionais e estrangeiros. Construída num típico clima de fazenda, possui ambiente e móveis rústicos, com telhado em capim Santa Fé, preservando o clima de galpão crioulo que é considerado o templo da cultura gaúcha. Razão pela escolha do nome da “ Churrascaria Galpão Crioulo ”</p>
+                        
+                    </div>
+    
+                </div>
+            </div>
+            <div class="side-div"></div>
         </div>
 
         <!-- parques -->
         <div style="display:none" id="parques">
+            <div class="side-div">
+        
+            </div>
+            <div class="center-div">
+                <div name="map"></div>
+    
+                <div name="content">
+                    <div name="note">
+                        Clique no logo dos bares para visualizá-los no mapa!
+                    </div>
+                    <div name="logo">
+                        <img class="imagemRestaurante" src="/images/moinhos.png" onclick="showMap('moinhos',1)" style="cursor:pointer" />
+                    </div>
+                    <div name="description">
+                        O Parque Moinhos de Vento oferece opções de lazer como jogging, patinação, quadras de futebol, tênis, vôlei e aparelhos de ginástica. Para o público infantil, estão à disposição equipamentos de recreação artesanais, feitos de toras de eucalipto, e uma biblioteca infantil.
+                    </div>
+                    <div name="logo">
+                        <img class="imagemRestaurante" src="/images/farroupilha.png" onclick="showMap('farroupilha',1)" style="cursor:pointer"/>
+                    </div>
+                    <div name="description">
+                        Ponto de lazer e convivência dos porto-alegrenses, é um dos locais preferidos para manifestações culturais de rua. Nos finais de semana, mais de 70 mil pessoas passeiam por seus 37 hectares repletos de monumentos, recantos e jardins temáticos, um grande lago, parque de diversões infantis, canchas de futebol e de bocha e pista de atletismo.
+                        
+                    </div>
+    
+                </div>
+            </div>
+            <div class="side-div"></div>
         </div>
 
         <!-- bares -->
         <div style="display:none" id="bares">
+            <div class="side-div">
+  	    	
+            </div>
+            <div class="center-div">
+              <div name="map"></div>
+  
+              <div name="content">
+                  <div name="note">
+                      Clique no logo dos bares para visualizá-los no mapa!
+                  </div>
+                  <div name="logo">
+                      <img class="imagemRestaurante" src="/images/sgtpepper.png" onclick="showMap('nb_steak',2)" style="cursor:pointer" />
+                  </div>
+                  <div name="description">
+                      Desde 1987, a noite de Porto Alegre tem o mais original Pub Londrino: Sgt. Peppers Pub, Bar & Restaurante. 
+                  </div>
+                  <div name="logo">
+                      <img class="imagemRestaurante" src="/images/artbar.png" onclick="showMap('galpao_crioulo',2)" style="cursor:pointer"/>
+                  </div>
+                  <div name="description">
+                      O Art&Bar cresceu, amadureceu e reafirmou a sua personalidade. 
+                      Rock n' Roll de qualidade, ambiente agradável, bebidas para todos os gostos e uma cozinha com sabores que irão diferenciar suas noites na Capital.
+                      
+                  </div>
+  
+              </div>
+            </div>
+            <div class="side-div"></div>
         </div>
 
         <!-- ofertas -->
         <div style="display:none" id="ofertas">
-            <img src="" alt=""/>
-            <p>Lançador de Ofertas</p>
-            <img src="" alt=""/>
-            <p>Tchê Ofertas</p>
-            <img src="" alt=""/>
-            <p>Groupon</p>
+            <div class="divisaoOferta" style="left:25%">
+                <img class="imagemOferta"src="https://image.flaticon.com/icons/png/512/39/39887.png" alt=""/>
+                <p style="left:3%;" class="paragrafoOferta">Lançador de Ofertas</p>
+            </div>
+            <div class="divisaoOferta" style="left:45%">
+                <img class="imagemOferta" src="https://image.flaticon.com/icons/png/512/39/39887.png" alt=""/>
+                <p style="left:10%;" class="paragrafoOferta">Tchê Ofertas</p>
+            </div>
+            
+            <div class="divisaoOferta" style="left:65%">
+                <img class="imagemOferta" src="https://image.flaticon.com/icons/png/512/39/39887.png" alt=""/>
+                <p style="left:20%;" class="paragrafoOferta">Groupon</p>
+            </div>
+            
         </div>
 
         <!-- transporte -->
         <div style="display:none" id="transporte">
+            <div class="side-div">  	    	
+            </div>
+    
+            <div class="center-div">
+                <div name="content">
+                    <div name="gif">
+                        <img class="imagemGif" id="gif-bus" src="/images/bus.gif">
+                    </div>
+                    <div name="logo">
+                        <img class="imagemRestaurante" src="/images/apps.png" />
+                    </div>
+                    <div name="description">
+                        Porto alegre tem a cobertura dos aplicativos mais conhecidos para mobilidade urbana.  Baixa em seu disposito móvel!
+                    </div>
+                    <div name="logo">
+                        <img class="imagemRestaurante" src="/images/carris.png" onclick="location.href='http://www.carris.com.br'" style="cursor:pointer" />
+                    </div>
+                    <div name="description">
+                        Empresa de ônibus em Porto Alegre. Clique no logo ao lado para acessar o site.
+                    </div>
+                    <div name="logo">
+                        <img class="imagemRestaurante" src="/images/trensurb.png" onclick="location.href='http://trensurb.gov.br/home.php'" style="cursor:pointer"/>
+                    </div>
+                    <div name="description">
+                        Vindo da grande Porto Alegre? Utilize o trem! Clique no logo ao lado para maiores informações.
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="side-div"></div>
         </div>
 
         <!-- eventos -->
         <div style="display:none" id="eventos">
-            </div>
+            <img  class="calendario" src="/images/calendario.png" alt=""/>
+        </div>
 
         <!-- contato -->
         <div style="display:none" id="contato">
-            <p>Envia suas sugestões/dúvidas</p>
+            <p class="paragrafoContato">Envia suas sugestões/dúvidas</p>
             <form>
-                <label for="nome">Nome</label>
-                <input type="text" name="contatoForm" id="nome">
+                <label class="labelContato" for="nome">Nome</label><br>
+                <input class="formInputText" type="text" name="contatoForm" id="nome">
                 <br>
-                <label for="assunto">Assunto</label>
-                <input type="text" name="contatoForm" id="assunto">
+                <label class="labelContato" for="assunto">Assunto</label><br>
+                <input class="formInputText" type="text" name="contatoForm" id="assunto">
                 <br>
-                <label for="mensagem">Mensagem</label>
-                <input type="text" name="contatoForm" id="mensagem">
+                <label class="labelContato" for="mensagem">Mensagem</label><br>
+                <textarea style="font-size: 100%;height:30%;" class="formInputText" rows="50" cols="100" id="mensagem"></textarea>
                 <br>
-                <button type="submit" name="enviarBtn">Enviar</button>
+                <button class="buttonContato" type="submit" name="enviarBtn">Enviar</button>
             </form>
         </div>
 

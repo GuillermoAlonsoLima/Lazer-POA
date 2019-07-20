@@ -1,0 +1,27 @@
+.titulo {
+    text-align: center;
+    font-size: 300%;
+    
+}
+
+.menu {
+    background-color: orange;
+    height: 5%;
+}
+
+/* .divisao {
+    border-style: solid;
+    border-color: orange;
+} */
+
+button {
+    height: 100%;
+    width: 12%;
+    background-color: orange;
+    border: none;
+    font-size: 150%;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,30 @@
+.paragrafoContato {
+    font-size: 200%;
+    text-align: center;
+}
+
+.labelContato {
+    font-size: 200%;
+    text-align: center;
+    left:10%;
+    position:relative;
+}
+
+form {
+    font-size: 200%;
+    width:100%;
+}
+
+.formInputText {
+    font-size: 200%;
+    width:80%;
+    left:10%;
+    position:relative;
+}
+
+.buttonContato {
+    width: 10%;
+    height: 5%;
+    left:80%;
+    position:relative;
+}

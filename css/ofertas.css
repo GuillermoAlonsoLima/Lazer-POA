@@ -1,0 +1,15 @@
+.imagemOferta {
+    width:50%;
+    position: relative;
+}
+
+.paragrafoOferta{
+    top:50%;
+    position: relative;
+    font-size:200%;
+}
+
+.divisaoOferta{
+    top:30%;
+    position: absolute;
+}

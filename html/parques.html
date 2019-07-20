@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Parques POA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+
+      function initMap() {
+        var nbsteak = {lat: -30.0179456, lng: -51.1893504};
+		var galpaoCrioulo = {lat: -30.0179456, lng: -51.1893504};	
+		var portoAlegre = {lat: -30.0317838,lng: -51.2093156};
+		
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: portoAlegre
+        });
+
+        var marker = new google.maps.Marker({
+          position: portoAlegre,
+          map: map,
+          title: 'Porto Alegre'
+        });
+	  }
+    
+	function showMap(location) {
+		var coordinates;
+		switch (location) {
+		  case "moinhos":
+			coordinates = {lat: -30.0264358, lng: -51.2019056};
+			break;
+		  case "farroupilha":
+			coordinates = {lat: -30.036832, lng: -51.2182536};
+			break;
+		  }
+		
+		
+		var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: coordinates
+        });
+
+        var marker = new google.maps.Marker({
+          position: coordinates,
+          map: map,
+          title: location
+        });
+	}
+	
+	</script>
+	
+  </head>
+  <body>
+  	    <div class="side-div">
+  	    	
+  	    </div>
+	  	<div class="center-div">
+		    <div id="map"></div>
+
+			<div id="content">
+				<div id="note">
+					Clique no logo dos bares para visualizá-los no mapa!
+				</div>
+				<div id="logo">
+					<img src="images/moinhos.png" onclick="showMap('moinhos')" style="cursor:pointer" />
+				</div>
+				<div id="description">
+					O Parque Moinhos de Vento oferece opções de lazer como jogging, patinação, quadras de futebol, tênis, vôlei e aparelhos de ginástica. Para o público infantil, estão à disposição equipamentos de recreação artesanais, feitos de toras de eucalipto, e uma biblioteca infantil.
+				</div>
+				<div id="logo">
+					<img src="images/farroupilha.png" onclick="showMap('farroupilha')" style="cursor:pointer"/>
+				</div>
+				<div id="description">
+					Ponto de lazer e convivência dos porto-alegrenses, é um dos locais preferidos para manifestações culturais de rua. Nos finais de semana, mais de 70 mil pessoas passeiam por seus 37 hectares repletos de monumentos, recantos e jardins temáticos, um grande lago, parque de diversões infantis, canchas de futebol e de bocha e pista de atletismo.
+					
+				</div>
+
+			</div>
+		</div>
+		<div class="side-div"></div>
+	    
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHkeZYygc1u7GPQqcOvKrHlOxVgSbLOKw&callback=initMap">
+    </script>
+  </body>
+</html>
