@@ -3,14 +3,22 @@
     <head>	
         <meta charset="UTF-8" />	
         <title>Lazer POA</title>
+
         <script src="/javascript/menu.js"></script>	
         <script src="/javascript/map.js"></script>	
-        <link rel="stylesheet" type="text/css" href="/css/restaurantes.css">
+        <script src="/javascript/calendar.js"></script>	
+        <script src='/node_modules/@fullcalendar/core/main.js'></script>
+        <script src='/node_modules/@fullcalendar/daygrid/main.js'></script>
+
+        <link rel="stylesheet" type="text/css" href="/css/outros.css">
         <link rel="stylesheet" type="text/css" href="/css/main.css">
         <link rel="stylesheet" type="text/css" href="/css/home.css">
         <link rel="stylesheet" type="text/css" href="/css/ofertas.css">
         <link rel="stylesheet" type="text/css" href="/css/contatos.css">
         <link rel="stylesheet" type="text/css" href="/css/eventos.css">
+        <link href='/node_modules/@fullcalendar/core/main.css' rel='stylesheet' />
+        <link href='/node_modules/@fullcalendar/daygrid/main.css' rel='stylesheet' />
+
         <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHkeZYygc1u7GPQqcOvKrHlOxVgSbLOKw&callback=initMap">
         </script>
@@ -21,12 +29,12 @@
         <!-- titulo -->
         <div>
             <div>
-                <p class="titulo"">Lazer POA</p>
+                <p class="titulo">Lazer POA</p>
             </div>
         </div>
 
         <!-- menu -->
-        <div class="menu"">
+        <div class="menu">
             <button type="button" id="homeBtn" onclick="selecionarMenu('home');">Home</button>
             <button type="button" id="restaurantesBtn" onclick="selecionarMenu('restaurantes');">Restaurante</button>
             <button type="button" id="parquesBtn" onclick="selecionarMenu('parques');">Parques</button>
@@ -208,7 +216,8 @@
 
         <!-- eventos -->
         <div style="display:none" id="eventos">
-            <img  class="calendario" src="/images/calendario.png" alt=""/>
+            <div id='calendar'></div>
+            <!-- <img  class="calendario" src="/images/calendario.png" alt=""/> -->
         </div>
 
         <!-- contato -->

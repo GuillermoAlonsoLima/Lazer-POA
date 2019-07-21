@@ -24,7 +24,10 @@ function initMap() {
   }
 
   /* Mostra o mapa
-   *
+   * Verifica que localização deve-semostrar
+   * Cria as cordenadas da localização
+   * Cria novo mapa com as cordenas
+   * Cria o marcados
   */
 function showMap(location,aba) {
     //alert("showMap");
@@ -35,6 +38,12 @@ function showMap(location,aba) {
         break;
       case "galpao_crioulo":
         coordinates = {lat: -30.0402703, lng: -51.2376956};
+        break;
+      case "moinhos":
+        coordinates = {lat: -30.0248, lng: -51.203};
+        break;
+      case "farroupilha":
+        coordinates = {lat: -29.9783, lng: -51.125};
         break;
       }
     
