@@ -1,10 +1,10 @@
 .paragrafoContato {
-    font-size: 200%;
+    font-size: 30px;
     text-align: center;
 }
 
 .labelContato {
-    font-size: 200%;
+    font-size: 15px;
     text-align: center;
     left:10%;
     position:relative;
@@ -16,15 +16,16 @@ form {
 }
 
 .formInputText {
-    font-size: 200%;
+    font-size: 15px;
     width:80%;
     left:10%;
     position:relative;
 }
 
 .buttonContato {
-    width: 10%;
-    height: 5%;
+    width: 80px;
+    height: 40px;
     left:80%;
     position:relative;
+	font-size: 20px;
 }

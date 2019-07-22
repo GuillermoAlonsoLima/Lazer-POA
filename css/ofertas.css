@@ -1,5 +1,7 @@
 .imagemOferta {
-    width:50%;
+    padding-top: 55px;
+	width:200px;
+	height: 230px
     position: relative;
 }
 

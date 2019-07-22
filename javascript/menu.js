@@ -9,6 +9,7 @@ var menus = ["home","restaurantes","parques","bares","ofertas","transporte","eve
 function desaparecerMenus(item,index){
     //alert("item:"+item);
     document.getElementById(item).style.display = "none";
+	document.getElementById(item).style.backgroundColor = "green";
 }
 
 /* Seleciona o menu clicado
@@ -21,8 +22,28 @@ function selecionarMenu(buttonId){
     menus.forEach(desaparecerMenus);
     //alert("buttonId2:"+buttonId);
     document.getElementById(buttonId).style.display = "block";
-    //alert("buttonId3:"+buttonId);
+	
+	
+	elements = document.getElementsByTagName("button");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.backgroundColor="orange";
+    }
+	document.getElementById(buttonId+"Btn").style.backgroundColor = "#E69500";
+	
 }
+
+function mouseOver(buttonId) {
+		document.getElementById(buttonId).style.fontWeight="bold";
+		
+}
+
+function mouseOut(buttonId) {
+	
+	document.getElementById(buttonId).style.fontWeight = "normal";
+	
+}
+
+
 
 // function init(item,index){
 //     alert("item:"+item);
