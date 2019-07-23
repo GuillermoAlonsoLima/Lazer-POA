@@ -3,6 +3,7 @@
     width: 89%;
     bottom: 0%;
     position: absolute;
+	text-align: justify;
 }
 
 .seguir {
@@ -20,8 +21,8 @@
 }
 
 .icone {
-    width:70%;
-    height:20%;
+    width:60%;
+    height:15%;
     left:16%;
     position:relative;
 }
