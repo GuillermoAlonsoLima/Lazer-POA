@@ -43,6 +43,26 @@ function mouseOut(buttonId) {
 	
 }
 
+var n = 0;
+			var images = [];
+			var time = 2000;
+			
+			images[0] = 'http://imagemaerears.com.br/wp-content/uploads/2016/08/Porto_Alegre-RS.jpg';
+			images[1] = 'http://imagemaerears.com.br/wp-content/uploads/2016/08/Inauguracao-Arena_Gremio.jpg';
+			images[2] = 'http://imagemaerears.com.br/wp-content/uploads/2016/08/Reinauguracao_Beira_Rio.jpg';
+			images[3] = 'http://imagemaerears.com.br/wp-content/uploads/2016/08/Rodovia_do_Parque.jpg';
+
+			function changeImage(){
+				document.slider.src = images[n];
+			
+				if (n < images.length - 1) {
+					n++;
+				} else {
+					n = 0;
+				}
+				setTimeout("changeImage()", 2000);
+			}
+	
 
 
 // function init(item,index){

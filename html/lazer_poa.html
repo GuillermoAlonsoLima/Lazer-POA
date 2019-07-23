@@ -10,6 +10,7 @@
         <script src="../javascript/calendar.js"></script>	
         <script src='../node_modules/@fullcalendar/core/main.js'></script>
         <script src='../node_modules/@fullcalendar/daygrid/main.js'></script>
+		
 
         <link rel="stylesheet" type="text/css" href="../css/outros.css">
         <link rel="stylesheet" type="text/css" href="../css/main.css">
@@ -23,10 +24,18 @@
         <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHkeZYygc1u7GPQqcOvKrHlOxVgSbLOKw&callback=initMap">
         </script>
-    </head>	
+		<script> 			
+			
+			window.onload = changeImage;
+			
+		</script>
 
+
+	</head>	
+	
     <body>
 
+		
         <!-- titulo -->
         <div class="titulo">
             <div>
@@ -48,7 +57,7 @@
 
         <!-- home -->
         <div style="display:block" id="home">
-            <img class="imagem" src="http://imagemaerears.com.br/wp-content/uploads/2016/08/Porto_Alegre-RS.jpg" alt=""/>
+            <img name = "slider" class="imagem" alt=""/>
             <div class="descricao divisao">
                 <p>
                     Porto Alegre é um município brasileiro e a capital do estado mais meridional do Brasil, o Rio Grande do Sul. Com uma área de 496,682 km², possui uma geografia diversificada, com morros, baixadas e um grande lago: o Guaíba. Dista 2 027 quilômetros de Brasília, a capital nacional.
