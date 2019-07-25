@@ -100,6 +100,30 @@ document.addEventListener('DOMContentLoaded', function() {
           title: 'Natal',
           start: '2019-12-25',
           allDay: true
+        },
+		{
+          id: '15',
+          title: 'Ceva no total',
+          start: '2019-07-29',
+          allDay: true
+        },
+		{
+          id: '16',
+          title: 'Inauguração espaço dos pais no Iguatemi',
+          start: '2019-08-05',
+          allDay: true
+        },
+		{
+          id: '17',
+          title: 'Homens de Preto no Teatro Sao Pedro',
+          start: '2019-08-09',
+          allDay: true
+        },		
+		{
+          id: '18',
+          title: 'Dia das crianças no Gazometro',
+          start: '2019-10-11',
+          allDay: true
         }
       ]
     });
