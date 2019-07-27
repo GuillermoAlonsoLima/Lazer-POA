@@ -103,10 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       ]
     });
-    // alert('calendar2');
-    // today = new Date();
-    // calendar.incrementDate({ month:1});
-    // calendar.gotoDate(today);
+    //Foi necessário renderiza-lo duas vezes para aparecer ao inicializar
     calendar.render();
     calendar.render();
   });
