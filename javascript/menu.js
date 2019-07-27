@@ -50,7 +50,7 @@ var n = 0;
 			images[3] = 'http://imagemaerears.com.br/wp-content/uploads/2016/08/Rodovia_do_Parque.jpg';
 
 			function changeImage(){
-				document.slider.src = images[n];
+				document.getElementById("slider").src = images[n];
 			
 				if (n < images.length - 1) {
 					n++;
