@@ -1,3 +1,5 @@
+HTML, BODY { height: 100%; }
+
 .imagemOferta {
     padding-top: 55px;
 	width:200px;
