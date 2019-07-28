@@ -30,19 +30,19 @@ input[type=Enviar] {
   float: left;
 }
 
-div[name=all]{
+.all{
   width: 80%;
   margin: 0 auto;
 }
 
 
-div[name=map] {
+.map {
 height: 40%;
 width: 100%;
 	
 }
 
-div[name=content]{
+.content{
     background-image:url('images/lacador.jpg');
     background-repeat:no-repeat;
     background-position:right bottom;
@@ -52,13 +52,13 @@ div[name=content]{
   padding-top: 20px;
 }
 
-div[name=note]{
+.note{
   text-align: center;
   margin-bottom: 20px;
   font-style: italic;
 }
 
-div[name=logo]{
+.logo{
 	width: 20%;
 	height: 20px;
 	
@@ -69,7 +69,7 @@ div[name=logo]{
 
 }
 
-div [name=description]{
+.description{
 	width: 70%;
 	height: 140px;
 	float:left;
@@ -92,7 +92,7 @@ div [name=description]{
   width:180px;
 }
 
-div[name=gif] {
+.gif {
   height: 40%;
   width: 100%;
   text-align: center;  

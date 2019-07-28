@@ -7,9 +7,7 @@ var menus = ["home","restaurantes","parques","bares","ofertas","transporte","eve
  * Coloca um 'none' na opção display para desaparecer com o mesmo
 */
 function desaparecerMenus(item,index){
-    //alert("item:"+item);
     document.getElementById(item).style.display = "none";
-	document.getElementById(item).style.backgroundColor = "green";
 }
 
 /* Seleciona o menu clicado
@@ -18,9 +16,8 @@ function desaparecerMenus(item,index){
  * Coloca um 'block' na opção display para mostra-lo
 */
 function selecionarMenu(buttonId){
-    //alert("buttonId:"+buttonId);
-    menus.forEach(desaparecerMenus);
-    //alert("buttonId2:"+buttonId);
+	menus.forEach(desaparecerMenus);
+	
     document.getElementById(buttonId).style.display = "block";
 	
 	
@@ -53,7 +50,7 @@ var n = 0;
 			images[3] = 'http://imagemaerears.com.br/wp-content/uploads/2016/08/Rodovia_do_Parque.jpg';
 
 			function changeImage(){
-				document.slider.src = images[n];
+				document.getElementById("slider").src = images[n];
 			
 				if (n < images.length - 1) {
 					n++;
@@ -62,10 +59,3 @@ var n = 0;
 				}
 				setTimeout("changeImage()", 2000);
 			}
-	
-
-
-// function init(item,index){
-//     alert("item:"+item);
-//     document.getElementById(item+"Btn").addEventListener("click", selecionarMenu(item),true);
-// }

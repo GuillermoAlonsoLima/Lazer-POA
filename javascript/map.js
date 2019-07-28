@@ -1,4 +1,4 @@
-var maps = document.getElementsByName('map');
+var maps = document.getElementsByClassName('map');
 /* Inicializa o mapa
  * Cria as coordenada dos locais a procurar no mapa, incluindo porto alegre
  * Cria o mapa em si
